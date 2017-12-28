@@ -1,8 +1,8 @@
 {
-    "name": "quickPick-selected",
-    "displayName": "quickPick-selected-text",
-    "description": "自动将选取的文本填充到 quickOpen 面板，用于快速跳转文件",
-    "version": "0.0.1",
+    "name": "quick-go-to-selected-file-path",
+    "displayName": "QuickGoToSelectedFilePath",
+    "description": "fill the selected file path to quickOpen panel.（自动将选取的文本填充到 quickOpen 面板，用于快速跳转文件。）",
+    "version": "0.0.3",
     "publisher": "duXing",
     "engines": {
         "vscode": "^1.18.0"
@@ -11,14 +11,21 @@
         "Other"
     ],
     "activationEvents": [
-        "onCommand:extension.quickPickSelectedText"
+        "onCommand:extension.quickGoToSelectedFilePath"
     ],
     "contributes": {
         "commands": [
             {
-                "command": "extension.quickPickSelectedText",
-                "title": "Quick Pick Selected Text",
-                "category": "sigma"
+                "command": "extension.quickGoToSelectedFilePath",
+                "title": "Quick Go To Selected File Path",
+                "category": "Go"
+            }
+        ],
+        "keybindings": [
+            {
+                "command": "extension.quickGoToSelectedFilePath",
+                "key": "ctrl+e",
+                "mac": "cmd+e"
             }
         ]
     },
