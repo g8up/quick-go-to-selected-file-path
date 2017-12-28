@@ -2,7 +2,7 @@
     "name": "quick-go-to-selected-file-path",
     "displayName": "QuickGoToSelectedFilePath",
     "description": "fill the selected file path to quickOpen panel.（自动将选取的文本填充到 quickOpen 面板，用于快速跳转文件。）",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "publisher": "duXing",
     "engines": {
         "vscode": "^1.18.0"
@@ -18,7 +18,7 @@
             {
                 "command": "extension.quickGoToSelectedFilePath",
                 "title": "Quick Go To Selected File Path",
-                "category": "Go"
+                "category": "Quick"
             }
         ],
         "keybindings": [
@@ -42,5 +42,10 @@
         "vscode": "^1.1.6",
         "@types/node": "^7.0.43",
         "@types/mocha": "^2.2.42"
-    }
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/g8up/quick-go-to-selected-file-path"
+    },
+    "icon": "images/icon.png"
 }
