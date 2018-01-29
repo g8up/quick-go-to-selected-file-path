@@ -8,13 +8,13 @@ function getSelection(){
     const editor = vscode.window.activeTextEditor;
 
     // check if there is no selection
-    if (editor.selection.isEmpty) {
+    if (!editor || editor.selection.isEmpty) {
         // the Position object gives you the line and character where the cursor is
         return '';
     }
     return editor.document.getText(editor.selection);
 }
-// console.log('launched: sigma ')
+
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
 export function activate(context: vscode.ExtensionContext) {
