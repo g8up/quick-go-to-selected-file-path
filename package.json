@@ -2,7 +2,7 @@
     "name": "quick-go-to-selected-file-path",
     "displayName": "Quick Go To Selected File Path",
     "description": "Fill the selected file path to quickOpen panel.（自动将选取的文本填充到 quickOpen 面板，用于快速跳转文件。）",
-    "version": "0.0.5",
+    "version": "0.0.6",
     "publisher": "duXing",
     "engines": {
         "vscode": "^1.18.0"

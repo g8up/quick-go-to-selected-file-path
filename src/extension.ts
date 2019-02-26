@@ -25,7 +25,7 @@ export function activate(context: vscode.ExtensionContext) {
         // The code you place here will be executed every time your command is executed
 
         // Display a message box to the user
-        vscode.commands.executeCommand('workbench.action.quickOpen', getSelection() );
+        vscode.commands.executeCommand('workbench.action.quickOpen', getSelection().trim() );
         // vscode.window.showInformationMessage(getSelection());
     });
 
