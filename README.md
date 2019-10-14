@@ -6,7 +6,7 @@ Quick jump to the file path you selected.（自动将选取的文本填充到 qu
 
 # Usage
 1. Select a file path in the text editor
-2. `Ctrl | ⌘ + E`
-3. `Enter`
+2. `Ctrl | ⌘ + E`: fill the text of selection to `quickOpen`Panel
+3. `Enter` to confirm
 
 **Enjoy it!**
