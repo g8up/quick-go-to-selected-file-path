@@ -9,8 +9,11 @@ function getSelection(){
 
     // check if there is no selection
     if (!editor || editor.selection.isEmpty) {
-        // the Position object gives you the line and character where the cursor is
-        return '';
+        // select word under cursor
+        const detectFileName = (?<=\/|^)(?!(?=\/|\$|\@))[\w\d\-\./]+(?=\/|$)*;
+        const fileNameSelected = editor.document.getWordRangeAtPosition(editor.selection.active, detectFileName)
+        if (!fileNameSelected)
+            return '';
     }
     return editor.document.getText(editor.selection);
 }
