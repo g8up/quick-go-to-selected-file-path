@@ -5,7 +5,7 @@ Quick jump to the file path you selected.（自动将选取的文本填充到 qu
 [Marketplace](https://marketplace.visualstudio.com/items?itemName=duXing.quick-go-to-selected-file-path)
 
 # Usage
-1. Select a file path in the text editor
+1. Select a file path in the text editor or move cursor over filename
 2. `Ctrl | ⌘ + E`: fill the text of selection to `quickOpen` Panel
 3. `Enter` to confirm
 
