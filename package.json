@@ -2,7 +2,7 @@
   "name": "quick-go-to-selected-file-path",
   "displayName": "Quick Go To Selected File Path",
   "description": "Fill the selected file path to quickOpen panel.",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "publisher": "duXing",
   "engines": {
     "vscode": "^1.18.0"
@@ -40,8 +40,8 @@
   "devDependencies": {
     "@types/mocha": "^2.2.48",
     "@types/node": "^7.10.9",
-    "typescript": "^2.9.2",
-    "vscode": "^1.1.36"
+    "@types/vscode": "^1.18.0",
+    "typescript": "^2.9.2"
   },
   "repository": {
     "type": "git",
