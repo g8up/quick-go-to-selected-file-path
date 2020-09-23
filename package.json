@@ -2,7 +2,7 @@
   "name": "quick-go-to-selected-file-path",
   "displayName": "Quick Go To Selected File Path",
   "description": "Fill the selected file path to quickOpen panel.",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "publisher": "duXing",
   "engines": {
     "vscode": "^1.18.0"
@@ -35,7 +35,7 @@
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
     "postinstall": "node ./node_modules/vscode/bin/install",
-    "test": "npm run compile && node ./node_modules/vscode/bin/test"
+    "test": "npm run compile && node ./out/test/util.test.js"
   },
   "devDependencies": {
     "@types/mocha": "^2.2.48",
@@ -49,6 +49,7 @@
   },
   "icon": "images/icon.png",
   "dependencies": {
-    "vsce": "^1.75.0"
+    "vsce": "^1.75.0",
+    "vscode-test": "^1.4.0"
   }
 }

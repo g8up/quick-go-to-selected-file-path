@@ -2,13 +2,14 @@
 // The module 'vscode' contains the VS Code extensibility API
 // Import the module and reference it with the alias vscode in your code below
 import * as vscode from 'vscode'
+import * as util from './util';
 
 function getSelection() {
   // current editor
   const editor = vscode.window.activeTextEditor
 
   // check if there is no selection
-  if (!editor || editor.selection.isEmpty) {
+  if (editor.selection.isEmpty) {
     // select word under cursor
     const detectFileName = /(?<=\/|^)(?!(?=\/|\$|\@))[\w\d\-\./]+(?=\/|$)*/
     const fileNameSelected = editor.document.getWordRangeAtPosition(
@@ -20,7 +21,7 @@ function getSelection() {
 
     return editor.document.getText(fileNameSelected)
   }
-  return editor.document.getText(editor.selection)
+  return util.pathSimplify(editor.document.getText(editor.selection));
 }
 
 // this method is called when your extension is activated
