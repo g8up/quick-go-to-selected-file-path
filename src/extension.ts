@@ -4,10 +4,8 @@
 import * as vscode from 'vscode'
 import * as util from './util';
 
-function getSelection() {
+function getSelection(editor) {
   // current editor
-  const editor = vscode.window.activeTextEditor
-
   // check if there is no selection
   if (editor.selection.isEmpty) {
     // select word under cursor
@@ -22,6 +20,7 @@ function getSelection() {
     return editor.document.getText(fileNameSelected)
   }
   return util.pathSimplify(editor.document.getText(editor.selection));
+
 }
 
 // this method is called when your extension is activated
@@ -34,13 +33,17 @@ export function activate(context: vscode.ExtensionContext) {
     'extension.quickGoToSelectedFilePath',
     () => {
       // The code you place here will be executed every time your command is executed
-
-      // Display a message box to the user
-      vscode.commands.executeCommand(
-        'workbench.action.quickOpen',
-        getSelection().trim(),
-      )
-      // vscode.window.showInformationMessage(getSelection());
+      const editor = vscode.window.activeTextEditor;
+      if (editor && editor) {
+        // Display a message box to the user
+        vscode.commands.executeCommand(
+          'workbench.action.quickOpen',
+          getSelection(editor).trim(),
+        )
+        // vscode.window.showInformationMessage(getSelection());
+      } else {
+        vscode.window.showInformationMessage('Please execute the command in editors.');
+      }
     },
   )
 
@@ -48,4 +51,4 @@ export function activate(context: vscode.ExtensionContext) {
 }
 
 // this method is called when your extension is deactivated
-export function deactivate() {}
+export function deactivate() { }
