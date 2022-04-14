@@ -5,7 +5,7 @@
   "version": "0.0.10",
   "publisher": "duXing",
   "engines": {
-    "vscode": "^1.18.0"
+    "vscode": "^1.66.0"
   },
   "categories": [
     "Other"
@@ -41,7 +41,8 @@
     "@types/mocha": "^2.2.48",
     "@types/node": "^7.10.9",
     "@types/vscode": "^1.66.0",
-    "typescript": "^2.9.2"
+    "typescript": "^4.6.3",
+    "vsce": "^2.7.0"
   },
   "repository": {
     "type": "git",
@@ -49,7 +50,6 @@
   },
   "icon": "images/icon.png",
   "dependencies": {
-    "vsce": "^1.75.0",
     "vscode-test": "^1.4.0"
   }
 }
