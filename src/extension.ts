@@ -34,7 +34,7 @@ export function activate(context: vscode.ExtensionContext) {
     () => {
       // The code you place here will be executed every time your command is executed
       const editor = vscode.window.activeTextEditor;
-      if (editor && editor) {
+      if (editor) {
         // Display a message box to the user
         vscode.commands.executeCommand(
           'workbench.action.quickOpen',
