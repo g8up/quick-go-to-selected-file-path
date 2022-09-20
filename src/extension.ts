@@ -42,7 +42,7 @@ export function activate(context: vscode.ExtensionContext) {
         )
         // vscode.window.showInformationMessage(getSelection());
       } else {
-        vscode.window.showInformationMessage('Please execute the command in editors.');
+        vscode.commands.executeCommand('workbench.action.quickOpen');
       }
     },
   )
